@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   <!--<style>
+    body.yesRedirect{
+        background-color: pink;
+    }
+   </style>-->
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Eu e tu.. Dia 21?</h1>
+        </div>
+        <div class="gif_container">
+            <img
+            src="assets/erm-fingers.gif" alt="Cute animated bunny">
+        </div>
+        <div class="buttons">
+            <button class="btn1" id="yesButton" ><a href="yes.html">Yes</a></button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+       /* function nextPage(){
+            document.body.classList.add('yesRedirect');
+            setTimeout(
+                function (){
+                    Window.location.href = "yes.html";
+                }, 500);
+        }*/
+        function moveButton(){
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
